@@ -1,0 +1,36 @@
+<div id="top" class="row">
+
+    <!-- this will send the user back to the home page -->
+    <button [routerLink]="['']" routerLinkActive="router-link-active"> Log Out</button>
+ 
+</div>
+
+<h1>Manage  your restaurant here</h1>
+
+<!-- this section will show if no restaurant exist -->
+<div>
+
+<input type="text" placeholder="Restaurant Name">
+<input type="text"  placeholder="Cusine">
+
+<h3>Create a menu for this restaurant</h3>
+<input type="text" placeholder="Item">
+<input type="text" placeholder="Cost">
+<input type="text" placeholder="Calories">
+<button>Add item</button> <!-- have a + symbol-->
+
+
+<table>
+    <p>This will show the menu dynamically</p>
+</table>
+
+<button>Register restaurant</button>
+</div>
+<!--  ******************************************* -->
+
+<!-- if restaurant exist show its info -->
+<p>Restaurant info</p>
+
+<!-- Sends to edit menu page -->
+<button>Edit menu</button>
+<!-- remember remove item  -->

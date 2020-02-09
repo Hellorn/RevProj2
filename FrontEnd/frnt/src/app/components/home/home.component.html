@@ -1,0 +1,28 @@
+
+
+
+<div id="top" class="row">
+    <!-- Reg sends to register page -->
+    <button id="reg" [routerLink]="['register']" routerLinkActive="router-link-active">Register</button>
+
+    <!-- smana send to Sign in as manager -->
+    <button id="smana" [routerLink]="['managerlogin']" routerLinkActive="router-link-active">Sign in as manager</button>
+</div>
+    
+    
+    <h1 id="title"><b>INSERT TITLE HERE!</b></h1>
+
+    <br><br><br><br>
+<div id="mid" class="column">
+    <input type="text" placeholder="Username">
+    <br>
+    <br>
+    <input type="password" placeholder="Password">
+    <br>
+<br>
+    <!-- Sends to user page if user exists -->
+    <button id="log" [routerLink]="['customerview']" routerLinkActive="router-link-active" ><b>Login</b></button>
+    
+</div>
+
+
