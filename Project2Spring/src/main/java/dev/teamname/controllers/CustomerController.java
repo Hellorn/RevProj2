@@ -30,11 +30,17 @@ public class CustomerController {
 		return cs.getCustomerById(id);
 	}
 	@ResponseBody
+	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
+	public Customer getCustomerById(@RequestParam String username) {
+		return cs.getCustomerByUsername(username);
+	}
+	@ResponseBody
 	@RequestMapping(value="/logincustomer",method=RequestMethod.POST)
 	public Customer login(@RequestBody loginobject loginInfo) {
 		
 		return cs.login(loginInfo.getUsername(),loginInfo.getPassword());
 	}
+	
 	@ResponseBody
 	@RequestMapping(value="/updatecustomer",method=RequestMethod.PUT)
 	public Customer updateCustomer(@RequestBody Customer customer) {
