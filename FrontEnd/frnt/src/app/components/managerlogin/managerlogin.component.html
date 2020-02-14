@@ -1,13 +1,29 @@
-<h1 id="title"><b>Manager Login!</b></h1>
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <a id="specific">Hobbledehoy's</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="'/register'">Sign Up</a>
+        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">User Login</a>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-    <br><br><br><br>
 <div id="mid" class="column">
-    <input type="text" placeholder="Username">
+    <h1 id="title"><b>Welcome, Restaurant Sign In.</b></h1>
+    <br><br><br><br>
+    <input type="text" placeholder="Restaurant Name">
     <br>
     <br>
-    <input type="password" placeholder="Password">
+    <input type="text" placeholder="Password">
     <br>
-<br>
-    <button id="log" [routerLink]="['managerpage']" routerLinkActive="router-link-active"><b>Login</b></button>
-    
+    <br>
+    <br>
+    <br>
+    <!-- Sends to user page if user exists -->
+    <button class="log" [routerLink]="['managerpage']" routerLinkActive="router-link-active"><span>Login</span></button>
+    <p>No Account?</p>
+    <!-- Reg sends to register page -->
+    <button class="log" [routerLink]="'/register'"><span>Register</span></button>
+    <br>
+    <br>
 </div>

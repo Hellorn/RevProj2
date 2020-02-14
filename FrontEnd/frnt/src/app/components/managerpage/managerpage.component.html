@@ -1,30 +1,34 @@
-<div id="top" class="row">
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <a id="specific">Hobbledehoy's</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="['manager']" routerLinkActive="router-link-active">Logout</a>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-    <!-- this will send the user back to the home page -->
-    <button [routerLink]="['']" routerLinkActive="router-link-active"> Log Out</button>
- 
-</div>
 
-<h1>Manage  your restaurant here</h1>
 
 <!-- this section will show if no restaurant exist -->
-<div>
+<div id="mid" class="column">
+    <h1>Manage your restaurant here</h1>
 
-<input type="text" placeholder="Restaurant Name">
-<input type="text"  placeholder="Cusine">
+    <input type="text" placeholder="Restaurant Name">
+    <input type="text" placeholder="Cusine">
 
-<h3>Create a menu for this restaurant</h3>
-<input type="text" placeholder="Item">
-<input type="text" placeholder="Cost">
-<input type="text" placeholder="Calories">
-<button>Add item</button> <!-- have a + symbol-->
+    <h3>Create a menu for this restaurant</h3>
+    <input type="text" placeholder="Item">
+    <input type="text" placeholder="Cost">
+    <input type="text" placeholder="Calories">
+    <br>
+    <button class="log"><span>Add item</span></button> <!-- have a + symbol-->
 
 
-<table>
-    <p>This will show the menu dynamically</p>
-</table>
+    <table>
+        <p>This will show the menu dynamically</p>
+    </table>
 
-<button>Register restaurant</button>
+    <button class="log"><span>Register restaurant</span></button>
 </div>
 <!--  ******************************************* -->
 
