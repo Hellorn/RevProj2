@@ -31,7 +31,7 @@ public class CustomerController {
 	}
 	@ResponseBody
 	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
-	public Customer getCustomerById(@RequestParam String username) {
+	public Customer getCustomerByUsername(@RequestParam String username) {
 		return cs.getCustomerByUsername(username);
 	}
 	@ResponseBody
