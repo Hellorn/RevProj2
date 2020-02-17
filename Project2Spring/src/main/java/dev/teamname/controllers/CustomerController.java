@@ -3,6 +3,7 @@ package dev.teamname.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import dev.teamname.services.CustomerService;
 import pojo.loginobject;
 @Component
 @Controller
+@CrossOrigin("http://localhost:9999")
 public class CustomerController {
 	
 	@Autowired
@@ -31,7 +33,7 @@ public class CustomerController {
 	}
 	@ResponseBody
 	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
-	public Customer getCustomerById(@RequestParam String username) {
+	public Customer getCustomerByUsername(@RequestParam String username) {
 		return cs.getCustomerByUsername(username);
 	}
 	@ResponseBody
