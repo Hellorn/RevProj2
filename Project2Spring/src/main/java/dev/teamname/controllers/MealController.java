@@ -18,38 +18,38 @@ import dev.teamname.services.MealService;
 
 @Component
 @Controller
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MealController {
 	@Autowired
 	MealService ms;
 	
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/addmeal", method = RequestMethod.POST)
 	public Meal createMeal(@RequestBody Meal meal) {
 		return ms.addMeal(meal);
 		
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/getmealsbyrestaurant",method=RequestMethod.GET)
 	public Set<Meal> getMealByRestaurant(@RequestParam Restaurant restaurant){
 		return ms.getMealsByRestaurant(restaurant);
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/getmealbycriteria",method=RequestMethod.GET)
 	public Set<Meal> getMealByCuisineCaloriesAndCost(@RequestParam String cuisine, int calories, double cost){
 		return ms.getMealByCuisineAndCostAndCalories(cuisine, calories, cost);
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/getmealbycuisine",method=RequestMethod.GET)
 	public Set<Meal> getMealByCuisine(@RequestParam String cuisine){
 		return ms.getMealByCuisine(cuisine);
 	
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/getmealbyid",method=RequestMethod.GET)
 	public Meal getMealById(@RequestParam int id){
@@ -57,13 +57,13 @@ public class MealController {
 		return ms.getMealById(id);
 		
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/deletemeal",method=RequestMethod.DELETE)
 	public boolean deleteMeal(@RequestBody Meal meal) {
 		return ms.deleteMeal(meal);
 	}
-	@CrossOrigin("*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@ResponseBody
 	@RequestMapping(value="/getallmeals",method=RequestMethod.GET)
 	public Set<Meal> getAllMeals(){
