@@ -18,7 +18,7 @@ import dev.teamname.services.MealService;
 
 @Component
 @Controller
-@CrossOrigin("http://localhost:9999")
+@CrossOrigin("http://localhost:4200")
 public class MealController {
 	@Autowired
 	MealService ms;
