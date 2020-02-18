@@ -9,16 +9,16 @@ import dev.teamname.repositories.MealRepo;
 
 @SpringBootTest
 class Project2SpringApplicationTests {
-	@Autowired
-	MealRepo mr;
-	
-	@Test
-	void contextLoads() {
-	}
-
-	@Test
-	void getMealById() {
-		Meal meal = mr.findById(1).get();
-		System.out.println(meal);
-	};
+//	@Autowired
+//	MealRepo mr;
+//	
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//	@Test
+//	void getMealById() {
+//		Meal meal = mr.findById(1).get();
+//		System.out.println(meal);
+//	};
 }

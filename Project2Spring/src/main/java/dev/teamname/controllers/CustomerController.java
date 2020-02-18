@@ -15,7 +15,7 @@ import dev.teamname.services.CustomerService;
 import pojo.loginobject;
 @Component
 @Controller
-@CrossOrigin("http://localhost:9999")
+@CrossOrigin("http://localhost:4200")
 public class CustomerController {
 	
 	@Autowired
