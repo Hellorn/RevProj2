@@ -15,45 +15,50 @@ import dev.teamname.services.CustomerService;
 import pojo.loginobject;
 @Component
 @Controller
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class CustomerController {
 	
 	@Autowired
 	CustomerService cs;
-	
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/addcustomer",method=RequestMethod.POST)
 	public Customer createCustomer(@RequestBody Customer customer) {
 		return cs.addCustomer(customer);
 	}
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/getcustomer",method=RequestMethod.GET)
 	public Customer getCustomerById(@RequestParam int id) {
 		return cs.getCustomerById(id);
 	}
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
 	public Customer getCustomerByUsername(@RequestParam String username) {
 		return cs.getCustomerByUsername(username);
 	}
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/logincustomer",method=RequestMethod.POST)
 	public Customer login(@RequestBody loginobject loginInfo) {
 		
 		return cs.login(loginInfo.getUsername(),loginInfo.getPassword());
 	}
-	
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/updatecustomer",method=RequestMethod.PUT)
 	public Customer updateCustomer(@RequestBody Customer customer) {
 		return cs.updateCustomer(customer);
 	}
+	@CrossOrigin("*")
 	@ResponseBody
 	@RequestMapping(value="/deletecustomer",method=RequestMethod.DELETE)
 	public boolean deleteCustomer(@RequestBody Customer customer) {
 		return cs.deleteCustomer(customer);
 		
 	}
+	
 	public Customer addMealToHistory(Customer customer) {
 		//NEEDS TO BE WORKED ON.
 		return null;
