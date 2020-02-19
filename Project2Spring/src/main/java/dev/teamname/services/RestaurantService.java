@@ -16,6 +16,6 @@ public interface RestaurantService  {
 	public Restaurant addRestaurant(Restaurant restaurant);
 	public boolean removeRestaurant(Restaurant restaurant);
 	public Restaurant updateRestaurant(Restaurant restaurant);
-	
+	public Restaurant getRestaurantByAddress(String address);
 	
 }

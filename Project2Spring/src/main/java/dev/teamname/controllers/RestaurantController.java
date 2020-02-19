@@ -47,7 +47,14 @@ public class RestaurantController {
 		return rs.getRestaurantByCuisine(cuisine);
 		
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
+	@ResponseBody
+	@RequestMapping(value="/getrestaurantbyaddress",method=RequestMethod.GET)
+	public Restaurant getRestaurantByAddress(@RequestParam String address) {
+		return rs.getRestaurantByAddress(address);
+	}
+	
+	
 	@ResponseBody
 	@RequestMapping(value="/getrestaurantbyid", method=RequestMethod.GET)
 	public Restaurant getRestaurantById(@RequestParam int id) {
