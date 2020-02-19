@@ -11,16 +11,16 @@
 <div id="mid" class="column">
     <h1 id="title"><b>Welcome, Restaurant Sign In.</b></h1>
     <br><br><br><br>
-    <input type="text" placeholder="Restaurant Name">
+    <input type="text" id="username" placeholder="Username">
     <br>
     <br>
-    <input type="text" placeholder="Password">
+    <input type="text" id="password" placeholder="Password">
     <br>
     <br>
     <br>
     <br>
-    <!-- Sends to user page if user exists -->
-    <button class="log" [routerLink]="['managerpage']" routerLinkActive="router-link-active"><span>Login</span></button>
+    <!-- Sends to user page if user exists [routerLink]="['managerpage']" routerLinkActive="router-link-active" -->
+    <button class="log" (click)="manalogin()"><span>Login</span></button>
     <p>No Account?</p>
     <!-- Reg sends to register page -->
     <button class="log" [routerLink]="'/register'"><span>Register</span></button>

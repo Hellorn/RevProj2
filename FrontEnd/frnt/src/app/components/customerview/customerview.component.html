@@ -46,17 +46,17 @@
 
     <br><br><br><br>
 
-    <input type="text" placeholder="Calories">
-    <br>
-    <br>
-    <input type="text" placeholder="Budget">
+    <input type="number" id="calories" placeholder="Calories">
+    <br><br>
+    <input type="number" id="cost" placeholder="Budget">
     <br><br><br><br>
-    <ng-multiselect-dropdown [placeholder]="'Preferences'" [data]="dropdownList" [(ngModel)]="selectedItems"
+    <ng-multiselect-dropdown [placeholder]="'Preferences'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
         [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
     </ng-multiselect-dropdown>
     <br><br>
-    <button class="log" [routerLink]="['mealpage']" routerLinkActive="router-link-active"><span>Get Meals</span></button>
+    <button class="log" (click)="getMeals()"><span>Get Meals</span></button>
     <br><br>
+
 </div>
 
 <div id="History">

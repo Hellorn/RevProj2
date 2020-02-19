@@ -11,18 +11,14 @@
 <div id="mid prio" class="topright">
     <h1 id="title"><b>Register for Hobbledehoy</b></h1>
     <br><br><br><br>
-    <input type="text" placeholder="Enter Username Here.">
-    <br>
-    <br>
-    <input type="text" placeholder="Enter Password Here.">
-    <br>
-    <br>
-    <mat-checkbox>Restaurant?</mat-checkbox>
-    <br>
-    <br>
-    <button class="log" [routerLink]="['']" routerLinkActive="router-link-active"><span>Register</span></button>
-    <br>
-    <br>
+    <input type="text" id="username" placeholder="Enter Username Here.">
+    <br><br>
+    <input type="text" id="password" placeholder="Enter Password Here.">
+    <br><br>
+    <mat-checkbox value="checked" (click)="changeValue(checked)">Do you own a Restaurant?</mat-checkbox>
+    <br><br>
+    <button class="log" (click)="register()"><span>Register</span></button>
+    <br> <br>
 </div>
 
 <!-- <div class="slideshow-container">
