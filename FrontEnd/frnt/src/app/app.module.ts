@@ -55,6 +55,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {SlideshowModule} from 'ng-simple-slideshow';
 
+import { HttpClientModule } from '@angular/common/http'; 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +71,9 @@ import {SlideshowModule} from 'ng-simple-slideshow';
 
   imports: [
     BrowserModule,
+
+    HttpClientModule,
+
     BrowserAnimationsModule,
     AppRoutingModule,
     MatCheckboxModule,

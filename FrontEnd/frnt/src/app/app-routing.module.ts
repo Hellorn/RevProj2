@@ -15,8 +15,10 @@ const routes: Routes = [
   {path: "register", component : RegisterComponent},
   {path: "customerview", component : CustomerviewComponent},
   {path: "managerlogin", component : ManagerloginComponent},
-  {path: "customerview/mealpage", component : MealpageComponent},
-  {path: "managerlogin/managerpage", component : ManagerpageComponent},
+
+  {path: "mealpage", component : MealpageComponent},
+  {path: "managerpage", component : ManagerpageComponent},
+
   {path : "**" , component :HomeComponent}
 
 ];

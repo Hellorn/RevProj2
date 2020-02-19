@@ -13,24 +13,38 @@
 <div id="mid" class="column">
     <h1>Manage your restaurant here</h1>
 
-    <input type="text" placeholder="Restaurant Name">
-    <input type="text" placeholder="Cusine">
+
+    <input type="text" id="name" placeholder="Restaurant Name">
+    <!-- We should have a list of the cusines for the manager to choose from not input text -->
+    <input type="text" id="cuisine" placeholder="Cusine">
+    <input type="text" id="address"placeholder="Address">
 
     <h3>Create a menu for this restaurant</h3>
-    <input type="text" placeholder="Item">
-    <input type="text" placeholder="Cost">
-    <input type="text" placeholder="Calories">
+    <input type="text" id="item" placeholder="Item">
+    <input type="number" id="cost" placeholder="Cost">
+    <input type="number" id="cal" placeholder="Calories">
     <br>
-    <button class="log"><span>Add item</span></button> <!-- have a + symbol-->
+    <button class="log" id="add" (click)="addMeal()"><span>Add item</span></button> <!-- have a + symbol-->
 
 
     <table>
-        <p>This will show the menu dynamically</p>
-    </table>
 
-    <button class="log"><span>Register restaurant</span></button>
+        <tr> <th>Item</th> <th></th> <th>Cost</th> <th>Calories</th>  </tr>
+        <tr *ngFor = "let x of meals">
+            <td>{{x.name}}</td>
+            <td>.........</td>
+            <td>{{x.cost}}</td>
+            <td>{{x.calories}}</td>
+        </tr>
+      
+      </table>
+      
+      
+
+    <button class="log" (click)="addRestaurant()"><span>Register restaurant</span></button>
 </div>
-<!--  ******************************************* -->
+<!--  ***************************************************************************************8** -->
+
 
 <!-- if restaurant exist show its info -->
 <p>Restaurant info</p>
