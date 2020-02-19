@@ -1,16 +1,87 @@
-<br>
-<h1 style="text-align: center;">REGISTER PAGE</h1>
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <a id="specific">Hobbledehoy's</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">User Login</a>
+        <a mat-button class="hov" [routerLink]="'/managerlogin'">Manager Login</a>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-<div id="mid">
+<div id="mid prio" class="topright">
+    <h1 id="title"><b>Register for Hobbledehoy</b></h1>
+    <br><br><br><br>
+    <input type="text" id="username" placeholder="Enter Username Here.">
+    <br><br>
+    <input type="text" id="password" placeholder="Enter Password Here.">
+    <br><br>
+    <mat-checkbox value="checked" (click)="changeValue(checked)">Do you own a Restaurant?</mat-checkbox>
+    <br><br>
+    <button class="log" (click)="register()"><span>Register</span></button>
+    <br> <br>
+</div>
 
-    <input type="text" placeholder="enter username here">
-    <br><br>
-    <input type="text" placeholder="enter password here">
-    <br><br>
-    <mat-checkbox>Are you a Manager?</mat-checkbox>
-    <br><br>
-    <!-- addds user to database -->
-    <button  [routerLink]="['']" routerLinkActive="router-link-active">REGISTER</button>
-    <br>
-    
+<!-- <div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="./assets/toast.jpg">
+    </div>
+    <div class="mySlides fade">
+        <img src="./assets/steak.jpg">
+    </div>
+    <div class="mySlides fade">
+        <img src="./assets/salad.jpg">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> -->
+<div class="container">
+    <img src="./assets/toast.jpg" class="slide">
+</div>
+
+<div class="flex">
+    <div class="flexcomponent">
+        <img src="./assets/dessert.png" height="112px" width="106px">
+        <h4>Local Favorites</h4>
+        <p>Satisfy any craving with delivery from the best and most popular restaurant chains in Morgantown.</p>
+    </div>
+    <div class="flexcomponent">
+        <img src="./assets/tree.png" height="112px" width="83px">
+        <h4>Sustainability</h4>
+        <p>Sustainable practice as we will direct the nearest Hobbledehoy to process your order and direct you to the
+            restaurants' door!</p>
+    </div>
+    <div class="flexcomponent">
+        <img src="./assets/money.png">
+        <h4>Deals</h4>
+        <p>Exclusive perks not limited to discounts and daily deals.</p>
+    </div>
+</div>
+
+<div class="flex1">
+    <div class="flexcomponent1">
+        <br><br><br><br>
+        <h2>Get the directions to the best food in town.</h2>
+        <p>Explore restaurants that are near you. With a place for every taste, it's easy to find the food you crave or
+            hard to decide just what to get.
+            Find great options with lots of local favorites. Enjoy eating the personalized way that everyone deserves.
+        </p>
+    </div>
+    <div class="flexcomponent1">
+        <img src="./assets/food.jpg" width="480px" height="320px">
+    </div>
+</div>
+
+<div class="flex2">
+    <div class="flexcomponent1">
+        <h2>About Hobbledehoy</h2>
+    </div>
+    <div class="flexcomponent1">
+        <p>this is example text. this is example text. this is example text. this is example text. this is example text.
+            this is example text. this is example text. this is example text.
+            this is example text. this is example text. this is example text. this is example text. this is example
+            text. this is example text. this is example text. this is example text.
+            this is example text. this is example text. this is example text. this is example text. this is example
+            text. this is example text. this is example text. this is example text.
+        </p>
+    </div>
 </div>

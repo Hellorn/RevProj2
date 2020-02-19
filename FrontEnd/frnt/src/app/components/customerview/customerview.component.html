@@ -1,45 +1,74 @@
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <a id="specific">Hobbledehoy's</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">Logout</a>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill Out Budget</ng-template>
+            <mat-form-field>
+                <mat-label>Budget</mat-label>
+                <input matInput placeholder="Budget" formControlName="firstCtrl" required>
+            </mat-form-field>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill Out Calories</ng-template>
+            <mat-form-field>
+                <mat-label>Calories</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Calories" required>
+            </mat-form-field>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Finished</ng-template>
+        <p>Press Get Meals to get your meals based on your selections and inputs or press reset to start all over!</p>
+        <div>
+            <button mat-button [routerLink]="['mealpage']" routerLinkActive="router-link-active">Get Meals</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-vertical-stepper> -->
 
 
-<div id="top" class="row">
+<div id="mid" class="column">
 
-    <!-- this will send the user back to the home page -->
-    <button [routerLink]="['']" routerLinkActive="router-link-active"> Log Out</button>
- 
-</div>
+    <h2 id="title">Welcome {{user}}</h2>
 
-<div id="mid">
+    <br><br><br><br>
 
-    <input type="text" placeholder="Calories">
-    <input type="text" placeholder="Budget">
-
-    <ng-multiselect-dropdown
-  [placeholder]="'Preferences'"
-  [data]="dropdownList"
-  [(ngModel)]="selectedItems"
-  [settings]="dropdownSettings"
-  (onSelect)="onItemSelect($event)"
-  (onSelectAll)="onSelectAll($event)"
-    >
+    <input type="number" id="calories" placeholder="Calories">
+    <br><br>
+    <input type="number" id="cost" placeholder="Budget">
+    <br><br><br><br>
+    <ng-multiselect-dropdown [placeholder]="'Preferences'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
+        [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
     </ng-multiselect-dropdown>
+    <br><br>
+    <button class="log" (click)="getMeals()"><span>Get Meals</span></button>
+    <br><br>
 
-
-    <!-- this divs will show the user history -->
 </div>
-
-
-<div id="get">
-    <button [routerLink]="['mealpage']" routerLinkActive="router-link-active">Get Meal</button>
-</div>
-
 
 <div id="History">
 
     <table>
-        
-        <th><tr>
-           History
-        </tr></th>
-        
+
+        <th>
+            <tr>
+                History
+            </tr>
+        </th>
+
     </table>
-    
-    </div>
+
+</div>

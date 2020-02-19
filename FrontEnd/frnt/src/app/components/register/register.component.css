@@ -1,7 +1,154 @@
-body {
-    background-color: lightgray;
-}
+
 
 #mid{
     text-align: center;
 }
+
+.topright {
+    position: absolute;
+    width: 380px;
+    border: 4px solid white;
+    border-radius: 4px;
+    background-color:whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 80%;
+    top: 50%;
+    left: 77.5%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.topleft {
+    width: 400px;
+    height: 400px;
+}
+
+.container {
+    max-width: 50%;
+    position: relative;
+    top: 150px;
+    left: 120px;
+}
+
+#title{
+    text-align: center;
+    font-style: italic;
+    font: 900;
+    color: rgb(255, 123, 0);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 80%;
+    position: relative;
+    top: 450px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.prio {
+    z-index: 50;
+}
+
+.flexcomponent {
+    width: 300px;
+    text-align: center;
+}
+
+.flexcomponent1 {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+img.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.flex1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 80%;
+    position: relative;
+    top: 450px;
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 90%;
+    position: relative;
+    top: 450px;
+}
+
+
+
+
+
+
+
+
+.slideshow-container {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
