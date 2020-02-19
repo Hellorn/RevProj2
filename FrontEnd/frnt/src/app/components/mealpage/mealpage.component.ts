@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import{meal} from 'app/Models/meal';
+
 
 @Component({
   selector: 'app-mealpage',
@@ -9,6 +11,7 @@ import{meal} from 'app/Models/meal';
 export class MealpageComponent implements OnInit {
 
   constructor() { }
+
   meals:Array<meal> = [];
   ngOnInit() {
     let m:meal[] = JSON.parse(sessionStorage.getItem('Meals'));
@@ -17,6 +20,7 @@ export class MealpageComponent implements OnInit {
     for(let i = 0; i < Object.keys(m).length; i++){
       this.meals.push(m[i]);
     }
+
   }
 
 }

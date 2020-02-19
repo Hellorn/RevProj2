@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import {restaurant} from 'app/Models/restaurant';
 import{RestaurantService} from 'app/Services/restaurant.service';
 import {Router} from '@angular/router';
+
 
 
 @Component({
@@ -10,6 +12,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./managerlogin.component.css']
 })
 export class ManagerloginComponent implements OnInit {
+
 
   constructor(private rs:RestaurantService, private router:Router) { }
 
@@ -36,6 +39,7 @@ export class ManagerloginComponent implements OnInit {
   
     }
   
+
 
   ngOnInit() {
   }

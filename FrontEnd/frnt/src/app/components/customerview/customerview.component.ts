@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {IDropdownSettings} from 'ng-multiselect-dropdown';
+
 import{meal} from 'app/Models/meal';
 import{MealService} from 'app/Services/meal.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-customerview',
@@ -13,6 +15,7 @@ export class CustomerviewComponent implements OnInit {
 
   dropdownSettings:IDropdownSettings;
   dropdownList = [];
+
   selectedItem = [];
 
   constructor(private ms:MealService, private router:Router) { }
@@ -38,6 +41,7 @@ console.log(cuisine);
 
 }
 
+
   ngOnInit() {
 
     this.dropdownList = [
@@ -47,14 +51,17 @@ console.log(cuisine);
       { item_id: 4, item_text: 'American' },
       { item_id: 5, item_text: 'Italian' },
       { item_id: 6, item_text: 'Indian' },
+
       {item_id: 7, item_text: 'Mediterranean'}
     ];
 
     this.selectedItem = [
+
     
     ];
 
     this.dropdownSettings = {
+
       singleSelection: true,
       idField: 'item_id',
       textField: 'item_text',
@@ -69,6 +76,7 @@ console.log(cuisine);
   onItemSelect(item: any) {
     console.log(item);
   }
+
 
   onSelectAll(items: any) {
     console.log(items);

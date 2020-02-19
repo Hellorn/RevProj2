@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {MatToolbarModule, MatButtonModule, MatSlideToggle} from '@angular/material';
+
 import {restaurant} from 'app/Models/restaurant';
 import{RestaurantService} from 'app/Services/restaurant.service';
 import {Router} from '@angular/router';
 import {customer} from 'app/Models/customer';
 import{CustomerService} from 'app/Services/customer.service';
+
 
 
 
@@ -14,6 +16,7 @@ import{CustomerService} from 'app/Services/customer.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
 
   constructor(private rs:RestaurantService, private cs:CustomerService,private router:Router) { }
 
@@ -49,6 +52,7 @@ if(!this.checked){
   }
   
     }
+
 
   ngOnInit() {
   }

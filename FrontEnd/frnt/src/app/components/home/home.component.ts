@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 // import {MatToolbarModule, MatButtonModule} from '@angular/material';
 import {customer} from 'app/Models/customer'
 import {CustomerService} from 'app/Services/customer.service'
 import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'app-home',
@@ -11,6 +13,7 @@ import {Router} from '@angular/router'
 })
 
 export class HomeComponent implements OnInit {
+
  
   
   constructor(private cs:CustomerService,private router: Router) { }
@@ -47,3 +50,4 @@ alert("User or password doesnt exist!");
 
 }
 }
+

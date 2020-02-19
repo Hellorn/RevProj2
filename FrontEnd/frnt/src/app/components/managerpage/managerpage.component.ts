@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+
 import{meal} from 'app/Models/meal';
 import{MealService} from 'app/Services/meal.service';
 import { restaurant } from 'app/Models/restaurant';
 import { RestaurantService } from 'app/Services/restaurant.service';
+
 
 @Component({
   selector: 'app-managerpage',
   templateUrl: './managerpage.component.html',
   styleUrls: ['./managerpage.component.css']
 })
+
 
 export class ManagerpageComponent implements OnInit {
 
@@ -57,6 +60,7 @@ export class ManagerpageComponent implements OnInit {
   ngOnInit() {
     let restauran:restaurant = JSON.parse(sessionStorage.getItem('Restaurant'));
     console.log(restauran)
+
   }
 
 }
