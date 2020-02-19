@@ -54,4 +54,8 @@ class Project2SpringApplicationTests {
 //		ms.updateMeal(meal);
 //		
 //	}
+//	@Test
+//	void getRestaurantByAddress() {
+//		System.out.println(rs.getRestaurantByAddress("update later"));
+//	}
 }
