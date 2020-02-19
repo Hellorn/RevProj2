@@ -20,38 +20,38 @@ public class CustomerController {
 	
 	@Autowired
 	CustomerService cs;
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 	@ResponseBody
 	@RequestMapping(value="/addcustomer",method=RequestMethod.POST)
 	public Customer createCustomer(@RequestBody Customer customer) {
 		return cs.addCustomer(customer);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 	@ResponseBody
 	@RequestMapping(value="/getcustomer",method=RequestMethod.GET)
 	public Customer getCustomerById(@RequestParam int id) {
 		return cs.getCustomerById(id);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 	@ResponseBody
 	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
 	public Customer getCustomerByUsername(@RequestParam String username) {
 		return cs.getCustomerByUsername(username);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+
 	@ResponseBody
 	@RequestMapping(value="/logincustomer",method=RequestMethod.POST)
 	public Customer login(@RequestBody loginobject loginInfo) {
 		
 		return cs.login(loginInfo.getUsername(),loginInfo.getPassword());
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/updatecustomer",method=RequestMethod.PUT)
 	public Customer updateCustomer(@RequestBody Customer customer) {
 		return cs.updateCustomer(customer);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/deletecustomer",method=RequestMethod.DELETE)
 	public boolean deleteCustomer(@RequestBody Customer customer) {

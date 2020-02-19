@@ -22,25 +22,25 @@ import pojo.loginobject;
 public class RestaurantController {
 	@Autowired
 	RestaurantService rs;
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/addrestaurant",method = RequestMethod.POST)
 	public Restaurant createRestaurant(@RequestBody Restaurant restaurant) {
 		return rs.addRestaurant(restaurant);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/updaterestaurant",method=RequestMethod.PUT)
 	public Restaurant updateRestaurant(@RequestBody Restaurant restaurant) {
 		return rs.updateRestaurant(restaurant);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/getallrestaurants",method=RequestMethod.GET)
 	public Set<Restaurant> getAllRestaurants() {
 		return rs.getAllRestaurants();
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/getrestaurantsbycuisine",method=RequestMethod.GET)
 	public Set<Restaurant> getRestaurantByCuisine(@RequestParam String cuisine){
@@ -53,19 +53,19 @@ public class RestaurantController {
 	public Restaurant getRestaurantById(@RequestParam int id) {
 		return rs.getRestaurantById(id);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
-	@RequestMapping(value="/getrestaurantbyname/query",method=RequestMethod.GET)
+	@RequestMapping(value="/getrestaurantbyname",method=RequestMethod.GET)
 	public Restaurant getRestaurantByName(@RequestParam String name) {
 		return rs.getRestaurantByName(name);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/getrestaurantbyusername",method=RequestMethod.GET)
 	public Restaurant getRestaurantByUsername(@RequestParam String username) {
 		return rs.getRestaurantByUsername(username);
 	}
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/loginrestaurant",method=RequestMethod.POST)
 	public Restaurant loginRestaurant(@RequestBody loginobject loginInfo) {
@@ -73,7 +73,7 @@ public class RestaurantController {
 		return rs.login(loginInfo.getUsername(),loginInfo.getPassword());
 	}
 	
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
+	
 	@ResponseBody
 	@RequestMapping(value="/deleterestaurant",method=RequestMethod.DELETE)
 	public boolean deleteRestaurantById(@RequestBody Restaurant restaurant) {
