@@ -45,13 +45,13 @@ class Project2SpringApplicationTests {
 //		System.out.println(meal);
 //
 //	}
-	@Test
-	void updateMeal() {
-		Meal meal = ms.getMealById(10);
-		Restaurant restaurant = rs.getRestaurantById(1);
-		meal.setName("UpdatedJUnit test");
-		meal.setRestaurant(rs.getRestaurantById(2));
-		ms.updateMeal(meal);
-		
-	}
+//	@Test
+//	void updateMeal() {
+//		Meal meal = ms.getMealById(10);
+//		Restaurant restaurant = rs.getRestaurantById(1);
+//		meal.setName("UpdatedJUnit test");
+//		meal.setRestaurant(rs.getRestaurantById(2));
+//		ms.updateMeal(meal);
+//		
+//	}
 }
