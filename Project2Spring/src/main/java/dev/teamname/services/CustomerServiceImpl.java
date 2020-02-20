@@ -50,7 +50,9 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public boolean deleteCustomer(Customer customer) {
 		// TODO Auto-generated method stub
+		System.out.println(customer);
 		cr.delete(customer);
+		
 		if(!cr.findById(customer.getCid()).isPresent()) {
 			return true;
 		}
@@ -62,6 +64,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer updateCustomer(Customer customer) {
 		// TODO Auto-generated method stub
+		
 		return cr.save(customer);
 	}
 

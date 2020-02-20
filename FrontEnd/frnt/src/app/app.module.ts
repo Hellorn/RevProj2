@@ -55,6 +55,10 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { HttpClientModule } from '@angular/common/http'; 
+import { PlusPipe } from './Pipes/plus.pipe';
+import { AgmComponent } from './components/agm/agm.component'; 
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -64,13 +68,18 @@ import { HttpClientModule } from '@angular/common/http';
     CustomerviewComponent,
     ManagerloginComponent,
     ManagerpageComponent,
-    MealpageComponent
+    MealpageComponent,
+    PlusPipe,
+    AgmComponent
   ],
 
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyDpcB8Oy8uGSnh4TWE2Z-ifM02gfInRIAs'
+    }),
     AppRoutingModule,
     MatCheckboxModule,
     FormsModule,

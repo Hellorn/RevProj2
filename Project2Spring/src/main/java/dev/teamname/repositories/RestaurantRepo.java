@@ -12,6 +12,7 @@ public interface RestaurantRepo extends CrudRepository<Restaurant,Integer>{
 	
 	public Restaurant findByName(String name);
 	public Restaurant findByUsername(String username);
+	public Restaurant findByAddress(String address);
 	public Set<Restaurant> findByCuisine(String cuisine);
 	
 }

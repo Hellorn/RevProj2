@@ -5,6 +5,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import pojo.loginobject;
 
 @Component
 @Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RestaurantController {
 	@Autowired
 	RestaurantService rs;
@@ -45,21 +47,32 @@ public class RestaurantController {
 		return rs.getRestaurantByCuisine(cuisine);
 		
 	}
+	
+	@ResponseBody
+	@RequestMapping(value="/getrestaurantbyaddress",method=RequestMethod.GET)
+	public Restaurant getRestaurantByAddress(@RequestParam String address) {
+		return rs.getRestaurantByAddress(address);
+	}
+	
+	
 	@ResponseBody
 	@RequestMapping(value="/getrestaurantbyid", method=RequestMethod.GET)
 	public Restaurant getRestaurantById(@RequestParam int id) {
 		return rs.getRestaurantById(id);
 	}
+	
 	@ResponseBody
-	@RequestMapping(value="/getrestaurantbyname/query",method=RequestMethod.GET)
+	@RequestMapping(value="/getrestaurantbyname",method=RequestMethod.GET)
 	public Restaurant getRestaurantByName(@RequestParam String name) {
 		return rs.getRestaurantByName(name);
 	}
+	
 	@ResponseBody
 	@RequestMapping(value="/getrestaurantbyusername",method=RequestMethod.GET)
 	public Restaurant getRestaurantByUsername(@RequestParam String username) {
 		return rs.getRestaurantByUsername(username);
 	}
+	
 	@ResponseBody
 	@RequestMapping(value="/loginrestaurant",method=RequestMethod.POST)
 	public Restaurant loginRestaurant(@RequestBody loginobject loginInfo) {

@@ -4,6 +4,8 @@ import{meal} from 'app/Models/meal';
 import{MealService} from 'app/Services/meal.service';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
@@ -27,7 +29,7 @@ async getMeals(){
   console.log(calories);
   console.log(cost);
 
-console.log(cuisine);
+ console.log(cuisine);
   let me:meal = await this.ms.getmealByCriteria(cuisine,calories,cost);
   console.log(me);
 
@@ -68,10 +70,6 @@ console.log(cuisine);
 
   onItemSelect(item: any) {
     console.log(item);
-  }
-
-  onSelectAll(items: any) {
-    console.log(items);
   }
 
 

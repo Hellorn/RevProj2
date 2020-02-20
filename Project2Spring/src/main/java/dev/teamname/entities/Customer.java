@@ -26,7 +26,7 @@ public class Customer {
 	@Column(name="PASSWORD")
 	private String password;
 	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name="CUSTOMER_MEAL",
+	@JoinTable(name="customermeal",
 	joinColumns= {@JoinColumn(name="C_ID")},inverseJoinColumns= {@JoinColumn(name="M_ID")})
 	private Set<Meal> meals = new HashSet<Meal>();
 	public int getCid() {

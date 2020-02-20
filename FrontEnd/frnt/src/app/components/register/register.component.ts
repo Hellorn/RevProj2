@@ -6,8 +6,6 @@ import {Router} from '@angular/router';
 import {customer} from 'app/Models/customer';
 import{CustomerService} from 'app/Services/customer.service';
 
-
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

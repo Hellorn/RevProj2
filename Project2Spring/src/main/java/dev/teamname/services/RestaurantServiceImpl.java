@@ -82,4 +82,10 @@ public class RestaurantServiceImpl implements RestaurantService{
 		return rr.findByCuisine(cuisine);
 	}
 
+	@Override
+	public Restaurant getRestaurantByAddress(String address) {
+		// TODO Auto-generated method stub
+		return rr.findByAddress(address);
+	}
+
 }

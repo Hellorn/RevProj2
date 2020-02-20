@@ -51,7 +51,7 @@
     <input type="number" id="cost" placeholder="Budget">
     <br><br><br><br>
     <ng-multiselect-dropdown [placeholder]="'Preferences'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
-        [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+        [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" >
     </ng-multiselect-dropdown>
     <br><br>
     <button class="log" (click)="getMeals()"><span>Get Meals</span></button>

@@ -3,6 +3,7 @@ package dev.teamname.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,26 +15,30 @@ import dev.teamname.services.CustomerService;
 import pojo.loginobject;
 @Component
 @Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CustomerController {
 	
 	@Autowired
 	CustomerService cs;
-	
+
 	@ResponseBody
 	@RequestMapping(value="/addcustomer",method=RequestMethod.POST)
 	public Customer createCustomer(@RequestBody Customer customer) {
 		return cs.addCustomer(customer);
 	}
+
 	@ResponseBody
 	@RequestMapping(value="/getcustomer",method=RequestMethod.GET)
 	public Customer getCustomerById(@RequestParam int id) {
 		return cs.getCustomerById(id);
 	}
+
 	@ResponseBody
 	@RequestMapping(value="/getcustomerbyusername",method=RequestMethod.GET)
-	public Customer getCustomerById(@RequestParam String username) {
+	public Customer getCustomerByUsername(@RequestParam String username) {
 		return cs.getCustomerByUsername(username);
 	}
+
 	@ResponseBody
 	@RequestMapping(value="/logincustomer",method=RequestMethod.POST)
 	public Customer login(@RequestBody loginobject loginInfo) {
@@ -46,12 +51,14 @@ public class CustomerController {
 	public Customer updateCustomer(@RequestBody Customer customer) {
 		return cs.updateCustomer(customer);
 	}
+	
 	@ResponseBody
 	@RequestMapping(value="/deletecustomer",method=RequestMethod.DELETE)
 	public boolean deleteCustomer(@RequestBody Customer customer) {
 		return cs.deleteCustomer(customer);
 		
 	}
+	
 	public Customer addMealToHistory(Customer customer) {
 		//NEEDS TO BE WORKED ON.
 		return null;

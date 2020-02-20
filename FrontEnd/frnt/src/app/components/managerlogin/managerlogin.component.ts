@@ -4,6 +4,8 @@ import{RestaurantService} from 'app/Services/restaurant.service';
 import {Router} from '@angular/router';
 
 
+
+
 @Component({
   selector: 'app-managerlogin',
   templateUrl: './managerlogin.component.html',
