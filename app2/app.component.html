@@ -1,0 +1,16 @@
+<!-- 
+<app-root> 
+  <h1>
+    {{title}}
+  </h1>
+</app-root> -->
+
+
+<button (click)='getLocation()'> click </button>
+<br>
+
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> 
