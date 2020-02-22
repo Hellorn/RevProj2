@@ -30,11 +30,13 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer login(String username, String password) {
 		// TODO Auto-generated method stub
 		Customer holder = cr.findByUsername(username);
-		System.out.println(username);
-		System.out.println(password);
-		System.out.println(holder);
-		if(holder.getPassword().contentEquals(password)) {
-			return holder;
+		
+		if(holder != null) {
+			if(holder.getPassword().contentEquals(password)) {
+				return holder;
+				}
+			
+			return null;
 		}
 		else {
 			return null;

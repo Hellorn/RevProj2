@@ -37,8 +37,11 @@ public class RestaurantServiceImpl implements RestaurantService{
 	public Restaurant login(String username, String password) {
 		// TODO Auto-generated method stub
 		Restaurant holder =  rr.findByUsername(username);
-		if(holder.getPassword().contentEquals(password)) {
+		if(holder!=null) {
+			if(holder.getPassword().contentEquals(password)) {
 			return holder;
+			}
+		return null;
 		}
 		else {
 			return null;
