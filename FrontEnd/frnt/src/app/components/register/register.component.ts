@@ -28,7 +28,7 @@ if(!this.checked){
     let  rest:restaurant = new restaurant(0,"",username,password,"","");
     
     let r:restaurant =await this.rs.addRestaurant(rest);
-   this.router.navigate(['/','']);
+   this.router.navigate(['/','managerlogin']);
      //  add like a fade in and out message for feedback to user to make him know he created an account
 
     }

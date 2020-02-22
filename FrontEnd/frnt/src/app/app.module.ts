@@ -58,6 +58,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlusPipe } from './Pipes/plus.pipe';
 import { AgmComponent } from './components/agm/agm.component'; 
 import { AgmCoreModule } from '@agm/core';
+import { ManagercreateComponent } from './components/managercreate/managercreate.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { AgmCoreModule } from '@agm/core';
     ManagerpageComponent,
     MealpageComponent,
     PlusPipe,
-    AgmComponent
+    AgmComponent,
+    ManagercreateComponent
   ],
 
   imports: [

@@ -3,8 +3,8 @@
         <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
         <a id="specific">Hobbledehoy's</a>
         <span class="spacer"></span>
-        <a mat-button class="hov" [routerLink]="'/register'">Sign Up</a>
-        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">User Login</a>
+        <a mat-button class="hov" [routerLink]="'/register'" id="signup">Sign Up</a>
+        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active" id="log">User Login</a>
     </mat-toolbar-row>
 </mat-toolbar>
 
@@ -14,7 +14,7 @@
     <input type="text" id="username" placeholder="Username">
     <br>
     <br>
-    <input type="text" id="password" placeholder="Password">
+    <input type="password" id="password" placeholder="Password">
     <br>
     <br>
     <br>

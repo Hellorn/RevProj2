@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   let  cust:customer = new customer(0,username,password);
   
   let c:customer =await this.cs.login(cust);
-    
+    console.log(c);
     if(c != null){
       let key = 'User'
     sessionStorage.setItem(key,JSON.stringify(c));
@@ -36,7 +36,8 @@ export class HomeComponent implements OnInit {
       console.log(user);
     }
     else {
-alert("User or password doesnt exist!");
+      console.log("c")
+      alert("User or password doesnt exist!");
     }
 
   }

@@ -1,5 +1,14 @@
-<agm-map [latitude]="lat" [longitude]="lng">
-  
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <a id="specific">Selected Location</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">Logout</a>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-</agm-map> 
+    <agm-map [zoom]="18" [latitude]="lat" [longitude]="lng">
+    
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+
+    </agm-map> 

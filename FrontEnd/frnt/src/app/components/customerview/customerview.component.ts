@@ -72,6 +72,7 @@ async getMeals(){
     console.log(item);
   }
 
+  user = JSON.parse(sessionStorage.getItem('User'));
 
 }
 
