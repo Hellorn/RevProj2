@@ -27,39 +27,39 @@ class Project2SpringApplicationTests {
 //		Meal meal = mr.findById(1).get();
 //		System.out.println(meal);
 //	};
-	@Autowired
-	MealService ms;
-	@Autowired
-	RestaurantService rs;
-	@Autowired
-	CustomerService cs;
-	@Test
-	public void getcustomerbyusername() {
-	//	System.out.println(cs.login("Elie", "zer"));
-		
-	}
-	
-	@Test
-	public void login() {
-		Customer holder = cs.login("4rin", "tjrn");
-		System.out.println(holder);
-	}
-	@Test
-	public void successfullogin() {
-		Customer holder = cs.login("Elie", "zer");
-		System.out.println(holder);
-	}
-	@Test
-	public void sucessfulrestaurantlogin() {
-		Restaurant holder = rs.login("uncle", "ben");
-		System.out.println(holder);
-	}
-
-	@Test 
-	public void restaurantlogin() {
-		Restaurant holder = rs.login("jrnjk", "etugiu5hi3uhu");
-		System.out.println(holder);
-	}
+//	@Autowired
+//	MealService ms;
+//	@Autowired
+//	RestaurantService rs;
+//	@Autowired
+//	CustomerService cs;
+//	@Test
+//	public void getcustomerbyusername() {
+//	//	System.out.println(cs.login("Elie", "zer"));
+//		
+//	}
+//	
+//	@Test
+//	public void login() {
+//		Customer holder = cs.login("4rin", "tjrn");
+//		System.out.println(holder);
+//	}
+//	@Test
+//	public void successfullogin() {
+//		Customer holder = cs.login("Elie", "zer");
+//		System.out.println(holder);
+//	}
+//	@Test
+//	public void sucessfulrestaurantlogin() {
+//		Restaurant holder = rs.login("uncle", "ben");
+//		System.out.println(holder);
+//	}
+//
+//	@Test 
+//	public void restaurantlogin() {
+//		Restaurant holder = rs.login("jrnjk", "etugiu5hi3uhu");
+//		System.out.println(holder);
+//	}
 //	
 //	@Test
 //	void addMeal() {
