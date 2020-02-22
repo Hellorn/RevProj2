@@ -33,6 +33,11 @@ public class MealController {
 		return ms.addMeal(meal);
 		
 	}
+	@ResponseBody
+	@RequestMapping(value="/getmealbycostandcalories")
+	public Set<Meal> getMealByCostAndCalories(@RequestParam double cost, int calories) {
+		return ms.getMealByCostAndCalories(cost, calories);
+	}
 	
 	@ResponseBody
 	@RequestMapping(value="/getmealsbyrestaurant",method=RequestMethod.GET)
