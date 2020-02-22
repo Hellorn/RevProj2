@@ -24,6 +24,7 @@ public class MealServiceImpl implements MealService {
 		// TODO Auto-generated method stub
 		return mr.save(meal);
 	}
+	
 
 	@Override
 	public Meal updateMeal(Meal meal) {
@@ -84,6 +85,13 @@ public class MealServiceImpl implements MealService {
 	public Set<Meal> getAllMeals() {
 		// TODO Auto-generated method stub
 		return new HashSet<Meal>((Collection<? extends Meal>) mr.findAll());
+	}
+
+
+	@Override
+	public Set<Meal> getMealByCostAndCalories(double cost, int calories) {
+		// TODO Auto-generated method stub
+		return mr.findByCaloriesLessThanEqualAndCostLessThanEqual(calories, cost);
 	}
 
 }
