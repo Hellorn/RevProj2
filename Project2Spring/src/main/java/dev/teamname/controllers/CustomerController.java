@@ -1,5 +1,9 @@
 package dev.teamname.controllers;
 
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -42,6 +46,7 @@ public class CustomerController {
 	@ResponseBody
 	@RequestMapping(value="/logincustomer",method=RequestMethod.POST)
 	public Customer login(@RequestBody loginobject loginInfo) {
+		Customer holder = cs.login(loginInfo.getUsername(), loginInfo.getPassword());
 		
 		return cs.login(loginInfo.getUsername(),loginInfo.getPassword());
 	}
