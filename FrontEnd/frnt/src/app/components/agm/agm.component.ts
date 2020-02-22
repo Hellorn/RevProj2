@@ -25,6 +25,7 @@ export class AgmComponent implements OnInit {
    this.lat= locationO.results[0].geometry.location.lat;
    this.lng= locationO.results[0].geometry.location.lng;
    console.log(this.lat);
+   console.log(this.lng);
   
   }
 

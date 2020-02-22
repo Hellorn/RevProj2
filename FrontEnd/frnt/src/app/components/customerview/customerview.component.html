@@ -42,7 +42,7 @@
 
 <div id="mid" class="column">
 
-    <h2 id="title">Welcome {{user}}</h2>
+    <h2 id="title">Welcome {{user.username}}</h2>
 
     <br><br><br><br>
 
@@ -50,7 +50,7 @@
     <br><br>
     <input type="number" id="cost" placeholder="Budget">
     <br><br><br><br>
-    <ng-multiselect-dropdown [placeholder]="'Preferences'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
+    <ng-multiselect-dropdown class="custom-font-size" [placeholder]="'Preferences'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
         [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" >
     </ng-multiselect-dropdown>
     <br><br>

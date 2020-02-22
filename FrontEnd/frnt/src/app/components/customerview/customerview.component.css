@@ -13,3 +13,7 @@
 .mat-form-field {
     margin-top: 16px;
 }
+
+.custom-font-size .multiselect-dropdown .dropdown-btn {
+    width: 300px !important; 
+  }
