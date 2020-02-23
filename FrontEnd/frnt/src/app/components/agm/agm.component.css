@@ -2,7 +2,18 @@ agm-map {
     height: 400px;
     width:800px;
     position: fixed;
-    top: 150px;
+    top: 250px;
     left: 550px;
     z-index: 100;
+}
+
+.back {
+    height: 450px;
+    width: 850px;
+    position: fixed;
+    top: 225px;
+    left: 525px;
+    opacity: 80%;
+    border-radius: 4px;
+    background-color:black;
 }
