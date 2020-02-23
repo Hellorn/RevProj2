@@ -41,12 +41,17 @@ export class MealService {
   
   getMealByCuisine(cuisine:string):Promise<meal>{
 
-    return this.http.get<meal>(`http://ec2-3-133-58-111.us-east-2.compute.amazonaws.com:9999/getmealbycuisine/${cuisine}`).toPromise();
+    return this.http.get<meal>(`http://ec2-3-133-58-111.us-east-2.compute.amazonaws.com:9999/getmealbycuisine?cuisine=${cuisine}`).toPromise();
   }
   
   getMealByCuisineAndCost(cuisine:string,cost:number):Promise<meal>{
 
     return this.http.get<meal>(`http://ec2-3-133-58-111.us-east-2.compute.amazonaws.com:9999/getmealmycuisineandcost/${cuisine}&${cost}`).toPromise();
+  }
+
+  getMealByCostandCalories(calories:number,cost:number):Promise<meal>{
+
+    return this.http.get<meal>(`http://ec2-3-133-58-111.us-east-2.compute.amazonaws.com:9999/getmealsbycostandcalories/${cost}&${calories}`).toPromise();
   }
   
   getmealByCriteria(cuisine:string,calories:number, cost:number){

@@ -3,6 +3,7 @@ import { restaurant } from 'app/Models/restaurant';
 import { RestaurantService } from 'app/Services/restaurant.service';
 import {Router} from '@angular/router';
 import {IDropdownSettings} from 'ng-multiselect-dropdown';
+import { isUndefined } from 'util';
 
 @Component({
   selector: 'app-managercreate',
@@ -22,6 +23,12 @@ export class ManagercreateComponent implements OnInit {
     let address=((document.getElementById("address")as HTMLInputElement).value);
     let cuisine = this.selectedItem[0].item_text;
 
+    if(name === "" || address ==="" || cuisine === "Select Cuisine" ){
+      
+      alert("Please fill out all the fields!");
+    
+    }
+else{
     let restauran:restaurant = JSON.parse(sessionStorage.getItem('Restaurant'));
     
     let re:restaurant = await this.rs.getRestaurantById(restauran.rid);
@@ -38,7 +45,7 @@ export class ManagercreateComponent implements OnInit {
      console.log(restauran);
      this.router.navigate(['/','managerpage']);
   }
-
+  }
 
   ngOnInit() {
     let restauran:restaurant = JSON.parse(sessionStorage.getItem('Restaurant'));
@@ -54,7 +61,7 @@ export class ManagercreateComponent implements OnInit {
     ];
 
     this.selectedItem = [
-    
+    {item_text: 'Select Cuisine'}
     ];
 
     this.dropdownSettings = {

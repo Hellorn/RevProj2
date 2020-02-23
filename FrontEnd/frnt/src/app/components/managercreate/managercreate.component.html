@@ -3,10 +3,10 @@
 
     <input type="text" id="name" placeholder="Restaurant Name">
     <!-- We should have a list of the cusines for the manager to choose from not input text -->
+    <input type="text" id="address"placeholder="Address">
     <ng-multiselect-dropdown class="custom-font-size" [placeholder]="'Cuisine'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
         [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" >
     </ng-multiselect-dropdown>
-    <input type="text" id="address"placeholder="Address">
 
     <button class="log" (click)="addRestaurant()"><span>Register</span></button>
 </div>
