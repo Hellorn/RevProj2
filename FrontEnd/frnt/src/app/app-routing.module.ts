@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: "customerview", component : CustomerviewComponent},
   {path: "managerlogin", component : ManagerloginComponent},
   {path: "mealpage", component : MealpageComponent},
-  {path:"agm" , component : AgmComponent}, 
+  {path: "agm" , component : AgmComponent}, 
   {path: "managerpage", component : ManagerpageComponent},
   {path: "managercreate", component : ManagercreateComponent},
   {path : "**" , component :HomeComponent}
