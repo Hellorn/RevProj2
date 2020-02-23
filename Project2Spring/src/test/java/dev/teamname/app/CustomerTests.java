@@ -112,9 +112,4 @@ class CustomerTests {
 		System.out.println(new2);
 	}
 
-	@Test
-	void testAddMealToHistory() {
-		fail("Not yet implemented");
-	}
-
 }
