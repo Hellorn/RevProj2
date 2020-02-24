@@ -17,6 +17,7 @@ public interface MealService {
 	public Set<Meal> getMealByCuisineAndCost(String cuisine, double cost);
 	public Set<Meal> getMealByCuisineAndCostAndCalories(String cuisine, int calories, double cost);
 	public Set<Meal> getAllMeals();
+	public Set<Meal> getMealByCostAndCalories(double cost, int calories);
 	public boolean deleteMeal(Meal meal);
 	
 	

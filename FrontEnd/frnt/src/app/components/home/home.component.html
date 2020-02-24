@@ -1,7 +1,7 @@
 <mat-toolbar id="fixed-header">
     <mat-toolbar-row>
-        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
-        <a id="specific">Hobbledehoy's</a>
+        <span><img src="./assets/shrimpthink.png" style="width:50px;"></span>
+        <a id="specific">Executive Decision</a>
         <span class="spacer"></span>
         <a mat-button class="hov" [routerLink]="['register']" routerLinkActive="router-link-active">Sign Up</a>
         <a></a>
@@ -20,7 +20,7 @@
     <br><br><br><br>
     <!-- Sends to user page if user exists [routerLink]="['customerview']"  routerLinkActive="router-link-active"-->
    <!-- (click)="custlogin()" -->
-    <button class="log" (click)="custlogin()">Login</button>
+    <button class="log" (click)="custlogin()"><span>Login</span></button>
     <p>No Account?</p>
     <!-- Reg sends to register page -->
     <button class="log" [routerLink]="['register']" routerLinkActive="router-link-active"><span>Register</span></button>

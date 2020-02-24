@@ -1,12 +1,21 @@
+<mat-toolbar id="fixed-header">
+    <mat-toolbar-row>
+        <span><img src="./assets/shrimpthink.png" style="width:50px;"></span>
+        <a id="specific">Manage your restaurant.</a>
+        <span class="spacer"></span>
+        <a mat-button class="hov" [routerLink]="['/managerlogin']" routerLinkActive="router-link-active">Logout</a>
+    </mat-toolbar-row>
+</mat-toolbar>
+
 <div id="mid" class="column">
     <h1>Manage your restaurant here</h1>
 
     <input type="text" id="name" placeholder="Restaurant Name">
     <!-- We should have a list of the cusines for the manager to choose from not input text -->
+    <input type="text" id="address"placeholder="Address">
     <ng-multiselect-dropdown class="custom-font-size" [placeholder]="'Cuisine'" id="cuisine" [data]="dropdownList" [(ngModel)]="selectedItem"
         [settings]="dropdownSettings" (onSelect)="onItemSelect($event)" >
     </ng-multiselect-dropdown>
-    <input type="text" id="address"placeholder="Address">
 
     <button class="log" (click)="addRestaurant()"><span>Register</span></button>
 </div>

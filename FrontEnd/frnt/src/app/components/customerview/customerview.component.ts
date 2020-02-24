@@ -3,29 +3,46 @@ import {IDropdownSettings} from 'ng-multiselect-dropdown';
 import{meal} from 'app/Models/meal';
 import{MealService} from 'app/Services/meal.service';
 import { Router } from '@angular/router';
-
-
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
   styleUrls: ['./customerview.component.css']
 })
+
 export class CustomerviewComponent implements OnInit {
 
   dropdownSettings:IDropdownSettings;
   dropdownList = [];
-  selectedItem = [];
+  selectedItem = [null];
 
   constructor(private ms:MealService, private router:Router) { }
 
 async getMeals(){
 
-  
   let calories=((document.getElementById("calories")as HTMLInputElement).valueAsNumber);
   let cost=((document.getElementById("cost")as HTMLInputElement).valueAsNumber);
-
   let cuisine = this.selectedItem[0].item_text;
+
+  if( Number.isNaN(cost)    || Number.isNaN(calories)){
+   
+    console.log(calories);
+    console.log(cost);
+  
+   console.log(cuisine);
+    let me:meal = await this.ms.getMealByCuisine(cuisine);
+    console.log(me);
+  
+    let key = 'Meals';
+    sessionStorage.setItem(key,JSON.stringify(me));
+     let mel = JSON.parse(sessionStorage.getItem(key));
+      this.router.navigate(['/','mealpage']);
+  }
+
+  else{
+
+    
   console.log(calories);
   console.log(cost);
 
@@ -39,7 +56,7 @@ async getMeals(){
     this.router.navigate(['/','mealpage']);
 
 }
-
+}
   ngOnInit() {
 
     this.dropdownList = [
@@ -53,7 +70,7 @@ async getMeals(){
     ];
 
     this.selectedItem = [
-    
+      { item_id: 4, item_text: 'American' }
     ];
 
     this.dropdownSettings = {

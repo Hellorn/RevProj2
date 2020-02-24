@@ -1,11 +1,15 @@
 <mat-toolbar id="fixed-header">
     <mat-toolbar-row>
-        <span><img src="./assets/AYAYA.png" style="width:50px;"></span>
+        <span><img src="./assets/shrimpthink.png" style="width:50px;"></span>
         <a id="specific">Selected Location</a>
         <span class="spacer"></span>
         <a mat-button class="hov" [routerLink]="['']" routerLinkActive="router-link-active">Logout</a>
     </mat-toolbar-row>
 </mat-toolbar>
+
+<div class="back">
+
+</div>
 
     <agm-map [zoom]="18" [latitude]="lat" [longitude]="lng">
     
